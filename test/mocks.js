@@ -84,6 +84,17 @@ const Mocks = {
             type: 'number'
           }
         },
+        arrayOfObjects: {
+          type: 'array',
+          items: {
+            type: 'object',
+            properties: {
+              prop: {
+                type: 'string'
+              }
+            }
+          }
+        },
         patterns: {
           type: 'object',
           patternProperties: {
@@ -114,8 +125,12 @@ const Mocks = {
         foo: 'string',
         bar: {}
       },
-      // arr: {}, //FIXME
+      //arr: {}, //FIXME
       arrNr: [123],
+      arrayOfObjects: [
+        {prop: 'valid'},
+        {prop: false},
+      ],
       patterns: {}
     };
   },
@@ -131,6 +146,9 @@ const Mocks = {
         foo: 'string'
       },
       arrNr: [123],
+      arrayOfObjects: [
+        {prop: 'valid'}
+      ],
       patterns: {}
     };
   }
